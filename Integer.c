@@ -1,13 +1,16 @@
 #include <stdio.h>
 
 int main() {
+    //declarations
     int myFirstInteger;
     int mySecondInteger;
 
-    myFirstInteger = 6;
-    mySecondInteger = 7;
+    //initialisations
+    myFirstInteger = 71;
+    mySecondInteger = 73;
     
-    printf("noVariable = %d\nmyFirstInteger = %d\nmySecondInteger = %d\n", 5, myFirstInteger, mySecondInteger);
+    //functions
+    printf("myFirstInteger + mySecondInteger = %d\n", myFirstInteger + mySecondInteger);
     
     return 0;
 }
