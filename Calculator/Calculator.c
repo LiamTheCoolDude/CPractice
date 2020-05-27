@@ -7,7 +7,7 @@ int main() {
     int result;
 
     //initialisations
-    myFirstInteger = (myFirstInteger % 10) + 2;
+    myFirstInteger = (myFirstInteger % 10) + 1;
     mySecondInteger = (mySecondInteger % 10) + 1;
     
     //functions
