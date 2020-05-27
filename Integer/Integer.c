@@ -13,7 +13,7 @@ int main() {
 
     //functions
     result = myFirstInteger * mySecondInteger;
-    printf("myFirstInteger * mySecondInteger = %d\n", result);
+    printf("%d * %d = %d\n", myFirstInteger, mySecondInteger, result);
     
     return 0;
 }
