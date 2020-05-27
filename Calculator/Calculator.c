@@ -7,8 +7,8 @@ int main() {
     int result;
 
     //initialisations
-    myFirstInteger = 4;
-    mySecondInteger = 9;
+    myFirstInteger = (myFirstInteger % 10) + 2;
+    mySecondInteger = (mySecondInteger % 10) + 1;
     
     //functions
     result = myFirstInteger * mySecondInteger;
