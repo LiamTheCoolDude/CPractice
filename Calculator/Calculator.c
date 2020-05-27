@@ -15,7 +15,7 @@ int main() {
     printf("The question is:\n");
     printf("What is %d * %d\n", myFirstInteger ,mySecondInteger);
     scanf("%d", &result);
-    printf("%d\n", myFirstInteger * mySecondInteger);
+    printf("The correct answer is : %d\n", myFirstInteger * mySecondInteger);
 
     return 0;
 }
