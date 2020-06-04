@@ -1,30 +1,33 @@
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main() {
     //declarations
-    int myFirstInteger;
-    int mySecondInteger;
-    int answerAdd;
-    int answerSubtract;
-    int answerMultiply;
-    int answerDivide;
- 
-    int input;
+    float myFirstInteger;
+    float mySecondInteger;
+    float answerAdd;
+    float answerSubtract;
+    float answerMultiply;
+    float answerDivide;
+    float input;
+    
     bool correct = false;
     
-    //initialisations
-    myFirstInteger = (myFirstInteger % 10) + 1;
-    mySecondInteger = (mySecondInteger % 10) + 1;
+    srand(time(0));
     
     //functions
 
     //function add
+    myFirstInteger = (rand() % 10) + 1;
+    mySecondInteger = (rand() % 10) + 1;
+    
     answerAdd = myFirstInteger + mySecondInteger;
     
     printf("The question is:\n");
-    printf("What is %d + %d\n", myFirstInteger ,mySecondInteger);
-    scanf("%d", &input);
+    printf("What is %f + %f\n", myFirstInteger ,mySecondInteger);
+    scanf("%f", &input);
 
     correct = (input == answerAdd);
 
@@ -33,14 +36,17 @@ int main() {
     else 
         printf("Your answer was %s\n", "WRONG");
 
-    printf("The correct answer is %d\n", answerAdd);
+    printf("The correct answer is %f\n", answerAdd);
     
     //function Subtract
+    myFirstInteger = (rand() % 10) + 1;
+    mySecondInteger = (rand() % 10) + 1;
+    
     answerSubtract = myFirstInteger - mySecondInteger;   
 
     printf("The subtraction question is:\n");
-    printf("What is %d - %d\n", myFirstInteger ,mySecondInteger);
-    scanf("%d", &input);
+    printf("What is %f - %f\n", myFirstInteger ,mySecondInteger);
+    scanf("%f", &input);
 
     correct = (input == answerSubtract);
 
@@ -49,14 +55,17 @@ int main() {
     else 
         printf("Your answer was %s\n", "WRONG");
 
-    printf("The correct answer is %d\n", answerSubtract);
+    printf("The correct answer is %f\n", answerSubtract);
 
     //function Multiply
+    myFirstInteger = (rand() % 10) + 1;
+    mySecondInteger = (rand() % 10) + 1;
+    
     answerMultiply = myFirstInteger * mySecondInteger;
 
     printf("The multiplication question is:\n");
-    printf("What is %d * %d\n", myFirstInteger ,mySecondInteger);
-    scanf("%d", &input);
+    printf("What is %f * %f\n", myFirstInteger ,mySecondInteger);
+    scanf("%f", &input);
 
     correct = (input == answerMultiply);
 
@@ -65,14 +74,17 @@ int main() {
     else 
         printf("Your answer was %s\n", "WRONG");
 
-    printf("The correct answer is %d\n", answerMultiply);
+    printf("The correct answer is %f\n", answerMultiply);
 
     //function Divide
+    myFirstInteger = (rand() % 10) + 1;
+    mySecondInteger = (rand() % 10) + 1;
+    
     answerDivide = myFirstInteger / mySecondInteger;
 
         printf("The question is:\n");
-    printf("What is %d / %d\n", myFirstInteger ,mySecondInteger);
-    scanf("%d", &input);
+    printf("What is %f / %f\n", myFirstInteger ,mySecondInteger);
+    scanf("%f", &input);
 
     correct = (input == answerDivide);
 
@@ -81,7 +93,7 @@ int main() {
     else 
         printf("Your answer was %s\n", "WRONG");
 
-    printf("The correct answer is %d\n", answerDivide);
+    printf("The correct answer is %f\n", answerDivide);
     
     
 
