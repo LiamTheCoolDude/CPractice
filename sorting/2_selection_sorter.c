@@ -11,20 +11,14 @@ wanted to learn how to use functions aswell.
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-#include <string.h>
 
 int selectionSort(int final[], int size) {
-    
-    srand(time(NULL));
 
 	int i;
 	int j;
     int min;
-    //int max;
     int minposition;
-    //int maxposition;
     int minstop = 0;
-    //int maxstop = 0;
     int swapcount = 0;
     
     //selection sorter
@@ -32,13 +26,7 @@ int selectionSort(int final[], int size) {
         
         min = final[i];
         minstop = 0;
-        //max = final[size - i - 1];
         minposition = i;//so that its not uninitialised
-       //maxposition = size - i - 1;
-
-        /*if(min == max || min == max - 1) {
-            break;
-        }*/
 
         //find the smallest number
         for(j = i; j < size; j++) {
@@ -46,30 +34,13 @@ int selectionSort(int final[], int size) {
             if(final[j] < min) {      
                 min = final[j];
                 minposition = j;
-                minstop++;
-                swapcount++;
             }
-
-            /*if(final[j] > max) {
-                max = final[size - i - 1];
-                maxposition = j;
-                maxstop++;
-                swapcount++;
-            }*/
 
         }//end smallest
 
         final[minposition] = final[i];
         final[i] = min;
-
-        if(minstop == 0) {
-
-            break;
-
-        }
-
-        //final[maxposition] = final[size - i - 1];
-        //final[size - i - 1] = max; 
+        swapcount++;
 
     }//end i loop
 
@@ -100,6 +71,10 @@ int main() {
 		int initial[size];
         int final[size];
         
+        for(i = 0; i < size; i++) {
+    	    initial[i] = rand() % 1000;
+		}
+
         for (int i = 0; i < size; i++) {
             final[i] = initial[i];
         }
@@ -108,9 +83,6 @@ int main() {
 
         //manual input of array values
 
-		for(i = 0; i < size; i++) {
-    		final[i] = rand() % 1000;
-		}
 
         clock_t start = clock();
 
@@ -128,7 +100,7 @@ int main() {
 
         }
 
-        printf("The values in the initial array add up to %d.\n", initialtotal);
+        printf("The values in the initial array add up to %d.", initialtotal);
 
         finaltotal = 0;
 
@@ -137,7 +109,26 @@ int main() {
 
         }
 
-        printf("The values in the final array add up to %d.\n", finaltotal);
+        printf("\nThe values in the final array add up to %d.\n", finaltotal);
+
+        //final in order
+		printf("\nThe initial numbers you entered in order are: ");
+		
+		for(i = 0; i < size; i++) {
+			
+			printf("%d ", initial[i]);
+			
+		}//end for loop
+        
+        //final in order
+		printf("\nThe final numbers you entered in order are:   ");
+		
+		for(i = 0; i < size; i++) {
+			
+			printf("%d ", final[i]);
+			
+		}//end for loop
+
 
 
 		printf("\n\nwould you like to go again (y): ");
