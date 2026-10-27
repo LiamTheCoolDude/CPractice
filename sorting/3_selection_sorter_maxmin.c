@@ -14,7 +14,7 @@ wanted to learn how to use functions aswell.
 #include <time.h>
 #include <stdlib.h>
 
-int selectionSort(int final[], int size) {
+void selectionSort(int final[], int size) {
 
 	int i;
 	int j;
@@ -47,6 +47,8 @@ int selectionSort(int final[], int size) {
     }//end i loop
 
     printf("Swap count = %d\n", swapcount);
+
+    return
 
 }
 
